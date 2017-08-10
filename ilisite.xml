@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+    <HEADERSECTION SENDER="lcano-20170810" VERSION="2.3">
+        <MODELS>
+            <MODEL NAME="IliSite10" VERSION="2017-08-10" URI="mailto:agenciadeimplementacion@incige.com" />
+        </MODELS>
+    </HEADERSECTION>
+    <DATASECTION>
+        <IliSite10.SiteMetadata  BID="b0">
+            <IliSite10.SiteMetadata.Site  TID="1">
+                <Name>proadmintierra.info</Name>
+                <Title>Agencia de Implementación - Modelos INTERLIS</Title>
+                <shortDescription>Modelos INTERLIS</shortDescription>
+                <Owner>http://proadmintierra.info</Owner>
+                <technicalContact>mailto:agenciadeimplementacion@incige.com</technicalContact>
+                <subsidiarySite>
+                    <!--IliSite10.RepositoryLocation_>
+                        <value>http://models.geo.admin.ch</value>
+                    </IliSite10.RepositoryLocation_>
+                    <IliSite10.RepositoryLocation_>
+                        <value>http://models.kkgeo.ch</value>
+                    </IliSite10.RepositoryLocation_>
+                    <IliSite10.RepositoryLocation_>
+                        <value>http://models.geo.llv.li</value>
+                    </IliSite10.RepositoryLocation_-->
+                </subsidiarySite>
+            </IliSite10.SiteMetadata.Site>
+        </IliSite10.SiteMetadata>
+    </DATASECTION>
+</TRANSFER>
