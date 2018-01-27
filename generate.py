@@ -13,7 +13,6 @@ def parse(origin, destiny, obj):
     f.write(parsed)
     f.close()
 
-
 obj = {'items': [
         {'name': 'LADM_COL', 'link': 'LADM_COL', 'img': 'img/folder.gif'},
         {'name': 'tools', 'link': 'tools', 'img': 'img/folder.gif'},
