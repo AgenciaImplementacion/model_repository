@@ -1,0 +1,4 @@
+/html/ilimodels.xml
+/html/**.ili
+!/html/tools/IliVErrors.ili
+/html/**.html
