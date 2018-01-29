@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git pull --recurse-submodules
+git submodule update --recursive --init
 
 java -cp bin/ili2c.jar ch.interlis.ili2c.MakeIliModelsXml LADM_COL
 
