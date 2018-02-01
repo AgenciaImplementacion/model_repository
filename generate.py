@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import os
 import pystache
+import glob
 
 def parse(origin, destiny, obj):
     f = open(origin, 'r')
@@ -28,7 +29,30 @@ obj = {'items': [
 parse('html_template/tools/index.html',
       'html/tools/index.html', obj)
 
-items = [ {'name': i, 'link': i, 'img': '../img/file.gif'} for i in os.listdir('html/LADM_COL') ]
-obj = {'items': items}
-parse('html_template/LADM_COL/index.html',
-      'html/LADM_COL/index.html', obj)
+retval = os.getcwd()
+
+def generate_index(pathname):
+    global retval
+    html_paht = retval + os.sep + 'html'
+    rel_path = os.path.relpath(html_paht, os.getcwd())
+    rel_path = rel_path.replace('\\', '/') # chante to URI
+    img_folder = rel_path + '/img/folder.gif'
+    img_file = rel_path + '/img/file.gif'
+    #print('rel_path', img_folder, img_file)
+    items = [{'name': os.path.dirname(path), 'link': path, 'img': img_folder} for path in glob.glob('*/')]
+    items.extend([{'name': file, 'link': file, 'img': img_file} for file in glob.glob('*.ili')])
+    obj = {'items': items}
+    parse(retval + os.sep + 'html_template/LADM_COL/index.html', 'index.html', obj)
+
+os.chdir('html/LADM_COL')
+initial_path = os.getcwd()
+all_paths = [path[0] for path in os.walk('.')]
+#print('all_paths', all_paths)
+for current_path in all_paths:
+    abs_path = initial_path + os.sep + current_path
+    #print('abs_path', abs_path, initial_path, os.pathsep, current_path)
+    os.chdir(abs_path)
+    pathname = os.path.dirname(current_path)
+    #print('pathname', pathname)
+    generate_index(pathname)
+    os.chdir(initial_path)
