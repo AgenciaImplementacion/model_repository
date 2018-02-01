@@ -39,11 +39,13 @@ def generate_index(pathname):
     img_folder = rel_path + '/img/folder.gif'
     img_file = rel_path + '/img/file.gif'
     img_return = rel_path + '/img/back.gif'
+    img_logo = rel_path + '/img/agencia_implementacion_swissphoto_incige.png'
     #print('rel_path', img_folder, img_file)
     items = [{'name': os.path.dirname(path), 'link': path, 'img': img_folder} for path in glob.glob('*/')]
     items.extend([{'name': file, 'link': file, 'img': img_file} for file in glob.glob('*.ili')])
-    obj = {'items': items}
-    obj = {'img_return': img_return}
+    obj = { 'items': items,
+            'img_return': img_return,
+            'img_logo': img_logo }
     parse(retval + os.sep + 'html_template/LADM_COL/index.html', 'index.html', obj)
 
 os.chdir('html/LADM_COL')
