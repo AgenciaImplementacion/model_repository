@@ -1,13 +1,15 @@
 #!/bin/bash
 
+# rationale: update submodules
 git submodule update --recursive --init
 
-java -cp bin/ili2c.jar ch.interlis.ili2c.MakeIliModelsXml LADM_COL
-
-rm html/ilimodels.xml | true
-mv LADM_COL/ilimodels.xml html
-
+# rationale: remove path of models and pull from LADM_COL repository
 rm -rf html/LADM_COL | true
 find LADM_COL/ -name '*.ili' -exec cp --parents \{\} html \;
 
+# rationale: remove and recreate ilimodels.xml
+rm html/ilimodels.xml | true
+java -cp bin/ili2c.jar ch.interlis.ili2c.MakeIliModelsXml html
+
+# rationale: generate 'index.html' of all paths with .ili files using templates
 ./generate.py
