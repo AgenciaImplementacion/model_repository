@@ -36,16 +36,20 @@ def generate_index(pathname):
     html_paht = retval + os.sep + 'html'
     rel_path = os.path.relpath(html_paht, os.getcwd())
     rel_path = rel_path.replace('\\', '/') # chante to URI
-    img_folder = rel_path + '/img/folder.gif'
-    img_file = rel_path + '/img/file.gif'
-    img_return = rel_path + '/img/back.gif'
-    img_logo = rel_path + '/img/agencia_implementacion_swissphoto_incige.png'
+    rel_path += '/'
+    img_folder = 'img/folder.gif'
+    img_file = 'img/file.gif'
+    img_return = 'img/back.gif'
+    img_logo = 'img/agencia_implementacion_swissphoto_incige.png'
     #print('rel_path', img_folder, img_file)
     items = [{'name': os.path.dirname(path), 'link': path, 'img': img_folder} for path in sorted(glob.glob('*/'))]
     items.extend([{'name': file, 'link': file, 'img': img_file} for file in sorted(glob.glob('*.ili'))])
-    obj = { 'items': items,
-            'img_return': img_return,
-            'img_logo': img_logo }
+    obj = {
+        'items': items,
+        'img_return': img_return,
+        'img_logo': img_logo,
+        'rel_path': rel_path
+    }
     parse(retval + os.sep + 'html_template/LADM_COL/index.html', 'index.html', obj)
 
 os.chdir('html/LADM_COL')

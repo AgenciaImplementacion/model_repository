@@ -1,24 +1,76 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>INTERLIS Model-Repository</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>INTERLIS Model-Repository</h1>
-        <br>
-        {{#items}}
-        <a href="{{link}}">
-            <img src="{{img}}" border=0 align=middle> {{name}}
-        </a>
-        <br />
-        {{/items}}
-        <br />
-    </body>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=$start">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INTERLIS Model-Repository</title>
+  <link rel="stylesheet" type="text/css" href="css/admin1.css">
+  <link rel="stylesheet" type="text/css" href="css/print.css">
+</head>
+
+<body>
+  <div class="container container-main">
+    <header>
+      <div class="clearfix">
+        <section class="nav-services clearfix">
+          <nav class="nav-lang">
+            <ul>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <a href="#" class="brand hidden-xs" title="back to home">
+        <img src="img/logo-CH.png" alt="back to home">
+        <h1>Model Repository für Geobasisdaten des Bundesrechts<br>Model Repository pour les géodonnées de base relevant du droit fédéral<br>Model Repository per i geodati di base di diritto federale<br>Model Repository for official geodata under federal legislation</h1>
+      </a>
+    </header>
+    <nav class="nav-main yamm navbar" id="main-navigation"></nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4 col-md-3 drilldown">
+          <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
+          <div class="drilldown-container">
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-9" id="content">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1>Model Repository</h1>
+              <div id="navigation" style="margin-bottom:14px;"><a href="https://repositorio.proadmintierra.info">http://repositorio.proadmintierra.info/</a> / </div>
+              <div id="listing">
+                <div class="pre">
+                  {{#items}}
+                  <a href="{{link}}">
+                      <img src="{{img}}" border=0 align=middle> {{name}}
+                  </a>
+                  <br />
+                  {{/items}}
+                </div>
+              </div>
+              <div id="listing2">
+                <div class="pre">
+                  <a target="_blank" href="http://github.com/AgenciaImplementacion/LADM_COL">Construido con Repositorio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <address>
+        <span class="hidden-xs">Swiss Confederation</span>
+        <nav class="pull-right">
+          <ul>
+            <li><a href="mailto:rolf.zuercher@swisstopo.ch">Contact</a></li>
+          </ul>
+        </nav>
+      </address>
+    </footer>
+  </div>
+</body>
+
 </html>
