@@ -5,6 +5,11 @@ body, figure {
   margin: 0
 }
 
+body {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
 .btn, .chosen-container {
   -webkit-user-select: none
 }
