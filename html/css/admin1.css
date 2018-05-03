@@ -6753,6 +6753,10 @@ blockquote::after {
   padding-right: 0
 }
 
+.brand img.logo-ide {
+  max-width: 300px;
+}
+
 .brand h1 {
   color: #000;
   font-size: .87em;
