@@ -7149,7 +7149,7 @@ label {
 }
 
 .has-warning .help-block {
-  color: #DC0018
+  color: #26A5EA
 }
 
 .has-error .control-label, .has-success .control-label {
@@ -7234,7 +7234,7 @@ header:after {
 .header-separator {
   height: 5px;
   width: 100%;
-  background: #DC0018
+  background: #26A5EA
 }
 
 .access-keys {
@@ -8676,7 +8676,7 @@ tfoot td.active {
 }
 
 .table-sort thead th:hover, .table-sort thead th:hover:after {
-  color: #DC0018
+  color: #26A5EA
 }
 
 .table-sort thead th div {
@@ -8698,7 +8698,7 @@ tfoot td.active {
 }
 
 .table-sort thead th.tablesorter-headerAsc div, .table-sort thead th.tablesorter-headerAsc:after, .table-sort thead th.tablesorter-headerDesc div, .table-sort thead th.tablesorter-headerDesc:after {
-  color: #DC0018 !important
+  color: #26A5EA !important
 }
 
 .table td[data-toggle=collapse], .table th[data-toggle=collapse] {
@@ -8707,7 +8707,7 @@ tfoot td.active {
 
 .table td[data-toggle=collapse]:hover, .table th[data-toggle=collapse]:hover {
   cursor: pointer;
-  color: #DC0018
+  color: #26A5EA
 }
 
 .table tbody tbody tr td:first-child, .table tbody tbody tr th:first-child {
@@ -8888,7 +8888,7 @@ a[data-toggle=collapse] {
 
 .alert--emergency {
   background-color: #fffab2;
-  border-left: 40px solid #DC0018;
+  border-left: 40px solid #26A5EA;
   border-radius: 0;
   padding-left: 15px
 }
@@ -9089,7 +9089,7 @@ a[data-toggle=collapse] {
 }
 
 .yamm-close-bottom:hover {
-  color: #DC0018;
+  color: #26A5EA;
   text-decoration: none
 }
 
@@ -9147,7 +9147,7 @@ nav li:first-child {
   left: 0;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border-bottom: 5px solid #DC0018
+  border-bottom: 5px solid #26A5EA
 }
 
 .nav-mobile .nav-mobile-header {
@@ -9242,18 +9242,30 @@ nav li:first-child {
 }
 
 .nav-main {
-  background: #e4e4e4;
+  /* background: #e4e4e4;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #ddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
   background: -webkit-linear-gradient(top, #e4e4e4 0, #e2e2e2 39%, #ddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  background: linear-gradient(to bottom, #e4e4e4 0, #e2e2e2 39%, #ddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%)
+  background: linear-gradient(to bottom, #e4e4e4 0, #e2e2e2 39%, #ddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%) */
+  background-image: url('../img/bg.jpg');
+}
+.nav-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  color: #fff;
+  margin: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 @media only screen and (max-width:767px) {
   .nav-main {
     background: #FFF;
     border: none;
-    border-bottom: 5px solid #DC0018;
+    border-bottom: 5px solid #26A5EA;
     position: relative
+  }
+  .nav-title {
+    display: none;
   }
   .nav-main .navbar-nav, .nav-service {
     display: none
@@ -9266,7 +9278,7 @@ nav li:first-child {
   }
   .nav-main {
     min-height: 65px;
-    border-top: 5px solid #DC0018;
+    /* border-top: 5px solid #26A5EA; */
     margin-bottom: 50px
   }
   .nav-main .nav-page-list {
@@ -9310,7 +9322,7 @@ nav li:first-child {
 }
 
 .nav-main.yamm .nav>li>a:focus, .nav-main.yamm .nav>li>a:hover {
-  color: #DC0018;
+  color: #26A5EA;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4), color-stop(10%, #fff), color-stop(79%, #fff), color-stop(91%, #fff), color-stop(100%, #dbdbdb));
   background: -webkit-linear-gradient(top, #f4f4f4 0, #fff 10%, #fff 79%, #fff 91%, #dbdbdb 100%);
@@ -9385,7 +9397,7 @@ nav li:first-child {
 }
 
 .nav-service a:hover {
-  color: #DC0018
+  color: #26A5EA
 }
 
 .nav-services {
@@ -9519,7 +9531,7 @@ nav li:first-child {
 
 .treecrumb .dropdown-toggle:focus, .treecrumb .dropdown-toggle:hover {
   background: 0 0;
-  color: #DC0018
+  color: #26A5EA
 }
 
 .treecrumb .dropdown-toggle:after, .treecrumb .dropdown-toggle:before {
@@ -9573,7 +9585,7 @@ nav li:first-child {
 
 .treecrumb .dropdown-menu a:hover {
   background: #FFF;
-  color: #DC0018;
+  color: #26A5EA;
   text-decoration: underline
 }
 
@@ -9649,7 +9661,7 @@ nav li:first-child {
     background: 0 0
   }
   .nav-page-list li.list-emphasis.active>a:before, .nav-page-list li.list-emphasis.active>span:before {
-    background: #DC0018
+    background: #26A5EA
   }
   .nav-page-list li.list-emphasis>a:hover {
     text-decoration: none !important;
@@ -9694,7 +9706,7 @@ nav li:first-child {
     background: 0 0
   }
   .nav-page-list li.active:before, .nav-page-list li.active>a:before, .nav-page-list li.active>a:hover:before {
-    background: #DC0018
+    background: #26A5EA
   }
   .nav-page-list li {
     border-bottom: 1px solid #CCC;
@@ -9977,7 +9989,7 @@ nav li:first-child {
     border-bottom: 3px solid transparent
   }
   .nav-process li a:active, .nav-process li a:focus, .nav-process li a:hover, .nav-process li.active a {
-    background: #DC0018;
+    background: #26A5EA;
     font-weight: 700
   }
   .nav-process li.disabled a:active, .nav-process li.disabled a:focus, .nav-process li.disabled a:hover {
@@ -10000,7 +10012,7 @@ nav li:first-child {
     border-left: 3px solid #D5D5D5
   }
   .nav-process li a:active:after, .nav-process li a:focus:after, .nav-process li a:hover:after, .nav-process li.active a:after {
-    border-left-color: #DC0018
+    border-left-color: #26A5EA
   }
   .nav-process li.disabled a:active:after, .nav-process li.disabled a:focus:after, .nav-process li.disabled a:hover:after {
     border-left-color: #D5D5D5
@@ -10155,7 +10167,7 @@ nav li:first-child {
   }
   .yamm--select .dropdown-toggle:active, .yamm--select .dropdown-toggle:focus, .yamm--select .dropdown-toggle:hover {
     text-decoration: none;
-    color: #DC0018
+    color: #26A5EA
   }
   .yamm--select .dropdown-toggle span {
     border-left: 1px solid #757575;
@@ -10170,7 +10182,7 @@ nav li:first-child {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: 0 0 transparent;
-    color: #DC0018;
+    color: #26A5EA;
     position: relative;
     z-index: 1000
   }
@@ -10213,7 +10225,7 @@ nav li:first-child {
   }
   .nav-tabs li:hover a {
     background: #F5F5F5;
-    color: #DC0018;
+    color: #26A5EA;
     border-right-color: #CCC;
     padding-top: 8px !important
   }
@@ -10227,7 +10239,7 @@ nav li:first-child {
     box-sizing: padding-box
   }
   .nav-tabs li.active a, .nav-tabs li.active:hover a, .nav-tabs li:hover a {
-    border-top: 3px solid #DC0018
+    border-top: 3px solid #26A5EA
   }
   .tab-content {
     padding: 20px 0
@@ -10238,7 +10250,7 @@ nav li:first-child {
     padding: 20px
   }
   .collapsify a[data-toggle=collapse]:first-child, .nav-tabs>li.active>a:focus {
-    border-top: 3px solid #DC0018
+    border-top: 3px solid #26A5EA
   }
   .tab-content.tab-border {
     border-right: 1px solid #CCC;
@@ -10262,7 +10274,7 @@ nav li:first-child {
     text-align: center
   }
   .collapsify a[data-toggle=collapse] {
-    border-top: 3px solid #DC0018;
+    border-top: 3px solid #26A5EA;
     border-bottom: 1px solid #FFF;
     border-right: 1px solid #CCC;
     border-left: 1px solid #CCC;
@@ -10369,7 +10381,7 @@ nav li:first-child {
       clear: both
     }
     .nav-tabs.nav-justified.nav-tabs-focus>.active>a, .nav-tabs.nav-justified.nav-tabs-focus>.active>a:hover, .nav-tabs.nav-tabs-focus.nav-justified>.active>a, .nav-tabs.nav-tabs-focus.nav-justified>.active>a:hover {
-      border-bottom: 3px solid #DC0018
+      border-bottom: 3px solid #26A5EA
     }
     .nav-tabs.nav-tabs-focus li {
       border: none;
@@ -10399,13 +10411,13 @@ nav li:first-child {
     .nav-tabs.nav-tabs-focus li a:focus, .nav-tabs.nav-tabs-focus li a:hover {
       height: 69px;
       border: none;
-      border-bottom: 3px solid #DC0018;
+      border-bottom: 3px solid #26A5EA;
       color: #000
     }
     .nav-tabs.nav-tabs-focus li.active a, .nav-tabs.nav-tabs-focus li.active a:focus, .nav-tabs.nav-tabs-focus li.active a:hover {
       border: none;
       padding-bottom: 10px !important;
-      border-bottom: 3px solid #DC0018;
+      border-bottom: 3px solid #26A5EA;
       background: #E5E5E5;
       color: #000
     }
@@ -10488,7 +10500,7 @@ nav li:first-child {
     background: #E5E5E5
   }
   .carousel-indicators .active {
-    background: #DC0018
+    background: #26A5EA
   }
   .social_share_privacy_area li .switch {
     background: url(../img/form-icons.svg);
