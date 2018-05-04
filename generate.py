@@ -16,18 +16,11 @@ def parse(origin, destiny, obj):
 
 obj = {'items': [
         {'name': 'LADM_COL', 'link': 'LADM_COL', 'img': 'img/folder.gif'},
-        {'name': 'tools', 'link': 'tools', 'img': 'img/folder.gif'},
         {'name': 'ilimodels.xml', 'link': 'ilimodels.xml', 'img': 'img/file.gif'},
         {'name': 'ilisite.xml', 'link': 'ilisite.xml', 'img': 'img/file.gif'},
         {'name': 'ModelRepository.pdf', 'link': 'ModelRepository.pdf', 'img': 'img/file.gif'}
         ]}
 parse('html_template/index.html', 'html/index.html', obj)
-
-obj = {'items': [
-        {'name': 'IliVErrors.ili', 'link': 'IliVErrors.ili', 'img': '../img/file.gif'}
-        ]}
-parse('html_template/tools/index.html',
-      'html/tools/index.html', obj)
 
 retval = os.getcwd()
 
