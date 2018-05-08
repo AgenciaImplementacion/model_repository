@@ -14,22 +14,31 @@ def parse(origin, destiny, obj):
     f.write(parsed)
     f.close()
 
-obj = {'items': [
+obj = {
+    'items': [
         {'name': 'LADM_COL', 'link': 'LADM_COL', 'img': 'img/folder.gif'},
         {'name': 'ilimodels.xml', 'link': 'ilimodels.xml', 'img': 'img/file.gif'},
         {'name': 'ilisite.xml', 'link': 'ilisite.xml', 'img': 'img/file.gif'},
         {'name': 'ModelRepository.pdf', 'link': 'ModelRepository.pdf', 'img': 'img/file.gif'}
-        ]}
+    ],
+    'img_return': 'img/back.gif',
+    'img_logo': 'img/agencia_implementacion_swissphoto_incige.png',
+    'rel_path': ''
+}
 parse('html_template/index.html', 'html/index.html', obj)
 
 retval = os.getcwd()
 
 def generate_index(pathname):
     global retval
-    html_paht = retval + os.sep + 'html'
-    rel_path = os.path.relpath(html_paht, os.getcwd())
+    html_path = retval + os.sep + 'html'
+    abs_path = os.getcwd()
+    rel_path = os.path.relpath(html_path, abs_path)
     rel_path = rel_path.replace('\\', '/') # chante to URI
     rel_path += '/'
+    current_path = os.path.relpath(abs_path, html_path)
+    current_path = current_path.replace('\\', '/') # chante to URI in Windows
+    current_path += '/'
     img_folder = 'img/folder.gif'
     img_file = 'img/file.gif'
     img_return = 'img/back.gif'
@@ -41,9 +50,10 @@ def generate_index(pathname):
         'items': items,
         'img_return': img_return,
         'img_logo': img_logo,
-        'rel_path': rel_path
+        'rel_path': rel_path,
+        'current_path': current_path
     }
-    parse(retval + os.sep + 'html_template/LADM_COL/index.html', 'index.html', obj)
+    parse(retval + os.sep + 'html_template/index.html', 'index.html', obj)
 
 os.chdir('html/LADM_COL')
 initial_path = os.getcwd()

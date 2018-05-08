@@ -9239,7 +9239,8 @@ nav li:first-child {
 }
 
 .drilldown-container {
-  overflow-y: auto
+  overflow-y: auto;
+  margin: 0 10% 0 10%;
 }
 
 .nav-main {

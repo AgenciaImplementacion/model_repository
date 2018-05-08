@@ -6,11 +6,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=$start">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>INTERLIS Model-Repository</title>
-  <link rel="stylesheet" type="text/css" href="css/admin1.css">
-  <link rel="stylesheet" type="text/css" href="css/print.css">
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-  <script src="js/onload.js"></script>
+  <title>INTERLIS Model-Repository LADM_COL</title>
+  <link rel="stylesheet" type="text/css" href="{{rel_path}}css/admin1.css">
+  <link rel="stylesheet" type="text/css" href="{{rel_path}}css/print.css">
+  <link rel="shortcut icon" type="image/png" href="{{rel_path}}favicon.png"/>
+  <script src="{{rel_path}}/js/onload.js"></script>
 </head>
 
 <body>
@@ -25,9 +25,9 @@
         </section>
       </div>
       <a href="#" class="brand hidden-xs" title="back to home">
-        <img class="logo-ide" src="img/logo-IDE.png" alt="back to home">
+        <img class="logo-ide" src="{{rel_path}}img/logo-IDE.png" alt="back to home">
         <!--<h1>Repositorio de Modelos LADM_COL<br>Model Repository LADM_COL</h1>-->
-        <img class="project" src="img/agencia_implementacion_swissphoto_incige.png" alt="proyecto administracion de tierras en colombia">
+        <img class="project" src="{{rel_path}}{{img_logo}}" alt="proyecto administracion de tierras en colombia">
         <img src="{{rel_path}}img/logo-CH.jpg" alt="logo SECO">
       </a>
     </header>
@@ -41,20 +41,33 @@
         <div class="col-sm-4 col-md-3 drilldown">
           <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
           <div class="drilldown-container">
+            <div id="ili-name">
+
+            </div>
+            <div id="ili-title">
+
+            </div>
+            <div id="ili-shortDescription">
+
+            </div>
           </div>
         </div>
         <div class="col-sm-8 col-md-9" id="content">
           <div class="row">
             <div class="col-sm-12">
-              <h1>Model Repository</h1>
-              <div id="navigation" style="margin-bottom:14px;"><a href="https://repositorio.proadmintierra.info">http://repositorio.proadmintierra.info/</a> / </div>
+              <h1>Model Repository LADM_COL</h1>
+              <div id="navigation" style="margin-bottom:14px;"><a href="https://repositorio.proadmintierra.info">https://repositorio.proadmintierra.info</a> / </div>
               <div id="listing">
                 <div class="pre">
-                  {{#items}}
-                  <a href="{{link}}">
-                      <img src="{{img}}" border=0 align=middle> {{name}}
+                  <a href="..">
+                      <img src="{{rel_path}}{{img_return}}" height="20" border="0" align="middle"> Parent directory
                   </a>
-                  <br />
+                  <br>
+                  {{#items}}
+                  <a href="{{link}}" data-name="{{current_path}}{{name}}" onmouseover="showDescription(this);">
+                      <img src="{{rel_path}}{{img}}" border=0 align=middle> {{name}}
+                  </a>
+                  <br>
                   {{/items}}
                 </div>
               </div>
