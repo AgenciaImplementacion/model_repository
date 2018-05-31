@@ -10,11 +10,16 @@
             <IliSite09.SiteMetadata.Site  TID="1">
                 <Name>proadmintierra.info</Name>
                 <Title>Agencia de Implementación - Modelos INTERLIS</Title>
-                <shortDescription>Modelos INTERLIS</shortDescription>
+                <shortDescription>Modelos INTERLIS de Colombia</shortDescription>
                 <Owner>http://proadmintierra.info</Owner>
                 <technicalContact>mailto:agenciadeimplementacion@incige.com</technicalContact>
-                <subsidiarySite>
-                    <!--IliSite09.RepositoryLocation_>
+                <parentSite>
+                    <IliSite09.RepositoryLocation_>
+                    <value>http://models.interlis.ch/</value>
+                    </IliSite09.RepositoryLocation_>
+                </parentSite>
+                <!--subsidiarySite>
+                    <IliSite09.RepositoryLocation_>
                         <value>http://models.geo.admin.ch</value>
                     </IliSite09.RepositoryLocation_>
                     <IliSite09.RepositoryLocation_>
@@ -22,8 +27,8 @@
                     </IliSite09.RepositoryLocation_>
                     <IliSite09.RepositoryLocation_>
                         <value>http://models.geo.llv.li</value>
-                    </IliSite09.RepositoryLocation_-->
-                </subsidiarySite>
+                    </IliSite09.RepositoryLocation_>
+                </subsidiarySite-->
             </IliSite09.SiteMetadata.Site>
         </IliSite09.SiteMetadata>
     </DATASECTION>
