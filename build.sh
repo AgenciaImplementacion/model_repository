@@ -5,6 +5,7 @@
 # rationale: previous update isn't working if commit was deleted
 # link: https://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin
 git submodule foreach git pull origin master
+git submodule update --recursive --init
 
 # rationale: remove path of models and pull from LADM_COL repository
 rm -rf html/LADM_COL | true
