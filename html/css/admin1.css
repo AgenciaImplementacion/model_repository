@@ -10584,3 +10584,11 @@ nav li:first-child {
     font-size: 14px !important
   }
 }
+
+
+#description {
+  max-height: 100vh;
+  overflow: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
