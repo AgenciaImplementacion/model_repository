@@ -10,7 +10,10 @@
   <link rel="stylesheet" type="text/css" href="{{rel_path}}css/admin1.css">
   <link rel="stylesheet" type="text/css" href="{{rel_path}}css/print.css">
   <link rel="shortcut icon" type="image/png" href="{{rel_path}}favicon.png"/>
-  <script src="{{rel_path}}/js/onload.js"></script>
+  <script>
+    window.rel_path = "{{rel_path}}"; // Pass variables from python to javascript
+  </script>
+  <script src="{{rel_path}}js/onload.js"></script>
 </head>
 
 <body>

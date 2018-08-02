@@ -22,7 +22,7 @@ var loadXML = function () {
           myFunction(this);
       }
   };
-  xhttp.open('GET', '/ilimodels.xml', true);
+  xhttp.open('GET', window.rel_path + 'ilimodels.xml', true);
   xhttp.send();
 
   function myFunction(xml) {
