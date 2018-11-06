@@ -2,6 +2,7 @@
 import os
 import pystache
 import glob
+import datetime
 
 def parse(origin, destiny, obj):
     f = open(origin, 'r')
@@ -14,6 +15,8 @@ def parse(origin, destiny, obj):
     f.write(parsed)
     f.close()
 
+datestamp = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+
 obj = {
     'items': [
         {'name': 'LADM_COL', 'link': 'LADM_COL', 'img': 'img/folder.gif'},
@@ -23,14 +26,15 @@ obj = {
     ],
     'img_return': 'img/back.gif',
     'img_logo': 'img/agencia_implementacion_swissphoto_incige.png',
-    'rel_path': ''
+    'rel_path': '',
+    'datestamp': datestamp
 }
 parse('html_template/index.html', 'html/index.html', obj)
 
 retval = os.getcwd()
 
 def generate_index(pathname):
-    global retval
+    global retval, datestamp
     html_path = retval + os.sep + 'html'
     abs_path = os.getcwd()
     rel_path = os.path.relpath(html_path, abs_path)
@@ -51,7 +55,8 @@ def generate_index(pathname):
         'img_return': img_return,
         'img_logo': img_logo,
         'rel_path': rel_path,
-        'current_path': current_path
+        'current_path': current_path,
+        'datestamp': datestamp
     }
     parse(retval + os.sep + 'html_template/index.html', 'index.html', obj)
 
