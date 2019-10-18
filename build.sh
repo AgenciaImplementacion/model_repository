@@ -15,5 +15,7 @@ find LADM_COL/ -name '*.ili' -exec cp --parents \{\} html \;
 rm html/ilimodels.xml | true
 java -cp bin/ili2c.jar ch.interlis.ili2c.MakeIliModelsXml html
 
+#Install requirements
+pip install -r requirements.txt
 # rationale: generate 'index.html' of all paths with .ili files using templates
 ./generate.py
