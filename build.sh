@@ -16,6 +16,8 @@ rm html/ilimodels.xml | true
 java -cp bin/ili2c.jar ch.interlis.ili2c.MakeIliModelsXml html
 
 #Install requirements
+virtualenv venv --distribute
+. venv/bin/activate 
 pip install -r requirements.txt
 # rationale: generate 'index.html' of all paths with .ili files using templates
 ./generate.py
